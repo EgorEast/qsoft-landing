@@ -1,0 +1,372 @@
+* {
+	font-family: Roboto, sans-serif;
+}
+html::-webkit-scrollbar {
+	display: none;
+}
+body {
+	--min-width-page: 375px;
+	--max-width-content: 1170px;
+	--header-height-pc-laptop: 80px;
+	--header-height-mobile: 105px;
+	--main-content-padding-top-bottom: 70px;
+	margin: 0;
+}
+header {
+	box-shadow: 0px 0px 6px lightgray;
+	position: fixed;
+	width: 100vw;
+	z-index: 1;
+	background: white;
+}
+header,
+body {
+	min-width: var(--min-width-page);
+}
+main {
+	z-index: 0;
+}
+@media screen and (min-width: 1300px) {
+	.main-content__title {
+		font-size: 36px;
+	}
+	.partners-container {
+		flex-wrap: wrap;
+	}
+	.partner-card {
+		width: 270px;
+	}
+	.partner-card__logo.henkel {
+		width: 116px;
+		height: 64px;
+	}
+	.partner-card__logo.john-deere {
+		width: 234px;
+		height: 44px;
+	}
+	.partner-card__logo.mc-donalds {
+		width: 85px;
+		height: 64px;
+	}
+	.partner-card__logo.ikea {
+		width: 160px;
+		height: 64px;
+	}
+	.partner-card__logo.reebok {
+		width: 234px;
+		height: 64px;
+	}
+	.partner-card__logo.nike {
+		width: 122px;
+		height: 64px;
+	}
+	.partner-card__logo.caterpillar {
+		width: 234px;
+		height: 36px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.content {
+		height: 100%;
+	}
+	header {
+		height: var(--header-height-pc-laptop);
+	}
+	.header__main-content {
+		height: 100%;
+	}
+	.search-field {
+		background: url('./img/search.svg') no-repeat;
+		background-position: 10px;
+	}
+	.header__search-field--pc-tablet-screen {
+		width: 65%;
+		min-width: 111px;
+		max-width: 763px;
+		border: 1px solid #ebebf1;
+		border-radius: 5px;
+		margin: 0 5%;
+	}
+	.header__search-field--mobile-screen {
+		display: none;
+	}
+	.profile-container__vertical-line {
+		width: 1px;
+		height: 100%;
+		background: #ebebf1;
+	}
+	.profile__first-name {
+		font-size: 14px;
+		color: #768298;
+		text-align: right;
+		letter-spacing: 0.01em;
+	}
+	.header__horizontal-line {
+		display: none;
+	}
+	.content-header--mobile-screen {
+		display: none;
+	}
+	.profile__avatar {
+		width: 40px;
+		height: 40px;
+		background: url(https://s3-alpha-sig.figma.com/img/b7b9/6ad8/d3eb4a2036057e5f2d6ade3e2173dfd1?Expires=1636329600&Signature=fI1sW1S3do5KL5yIeW53Ji-ZA-VZiYCL9JKwYbZ~31nbF8zZ2GIvyI7IEbRRyk8xVKVFfZoxN8BTwJr3Ph3h7AtMCA7CB3WOFKee-v8W~kdFDL9CwyDyZw~9nnKxwrsHakxoAMaIHfNF~h6BWwKPNCD9BaOLFUStPr6OvgxMJSJVNVpX~9fybQMPjTtqPlFnDZERS0WV0V-tYqS228xLcDUp7~o3KnHYwHSp55HEfe112D0kmCIdL37Wg0zrCLrJWwxuAsG4oyhQlWweWT0Un43HFa6CSeRSewpr9mucBu5d-RqPfa5R0kER7yyDcdCOFq4gkieRvMy2kXthrXxb9A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+		min-width: 40px;
+		margin: 0px 10px;
+	}
+	.main-content {
+		min-height: calc(
+			100vh - var(--header-height-pc-laptop) -
+				var(--main-content-padding-top-bottom) * 2
+		);
+		position: relative;
+		top: var(--header-height-pc-laptop);
+	}
+	.partner-card {
+		height: 120px;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 1300px) {
+	.main-content__title {
+		font-size: 28px;
+	}
+	.partners-container {
+		flex-wrap: wrap;
+	}
+	.partner-card {
+		width: 230px;
+	}
+	.partner-card__logo.henkel {
+		width: 117px;
+		height: 64px;
+	}
+	.partner-card__logo.john-deere {
+		width: 183px;
+		height: 34px;
+	}
+	.partner-card__logo.mc-donalds {
+		width: 99px;
+		height: 74px;
+	}
+	.partner-card__logo.ikea {
+		width: 175px;
+		height: 70px;
+	}
+	.partner-card__logo.reebok {
+		width: 187px;
+		height: 38px;
+	}
+	.partner-card__logo.nike {
+		width: 143px;
+		height: 74px;
+	}
+	.partner-card__logo.caterpillar {
+		width: 196px;
+		height: 30px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		height: 105px;
+	}
+	.header__main-content {
+		height: 63px;
+	}
+	.search-field {
+		background: url('./img/search.svg') no-repeat;
+		background-position: 0px;
+	}
+	.header__search-field--pc-tablet-screen {
+		display: none;
+	}
+	.header__search-field--mobile-screen {
+		border: none;
+		width: 100%;
+	}
+	.profile-container__vertical-line {
+		display: none;
+	}
+	.profile__first-name {
+		display: none;
+	}
+	.header__horizontal-line {
+		margin: 0;
+		width: 100%;
+		height: 1px;
+		background-color: lightgray;
+	}
+	.profile__avatar {
+		width: 24px;
+		height: 24px;
+		background: url(./img/default-profile-avatar.svg);
+		min-width: 24px;
+	}
+	.main-content {
+		min-height: calc(
+			100vh - var(--header-height-mobile) -
+				var(--main-content-padding-top-bottom) * 2
+		);
+		position: relative;
+		top: var(--header-height-mobile);
+	}
+
+	.partners-container {
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	.partner-card {
+		width: calc(100% - 13px);
+		height: 140px;
+	}
+	.partner-card__logo.henkel {
+		width: 145px;
+		height: 82px;
+	}
+	.partner-card__logo.john-deere {
+		width: 234px;
+		height: 44px;
+	}
+	.partner-card__logo.mc-donalds {
+		width: 100px;
+		height: 75px;
+	}
+	.partner-card__logo.ikea {
+		width: 194px;
+		height: 78px;
+	}
+	.partner-card__logo.reebok {
+		width: 232px;
+		height: 48px;
+	}
+	.partner-card__logo.nike {
+		width: 141px;
+		height: 74px;
+	}
+	.partner-card__logo.caterpillar {
+		width: 247px;
+		height: 38px;
+	}
+}
+
+.header__main-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.content {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+	max-width: var(--max-width-content);
+}
+
+.header__logo {
+	background: url('./img/logo.svg');
+	width: 135px;
+	min-width: 135px;
+	height: 30px;
+	display: inline-block;
+}
+
+.search-field {
+	height: 40px;
+	padding-left: 39px;
+	box-sizing: border-box;
+}
+.search-field:focus {
+	background: none;
+	padding-left: 5px;
+}
+
+.header__profile-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.header__profile {
+	display: flex;
+	align-items: center;
+	margin-left: 19px;
+}
+
+.profile__avatar {
+	background-size: 100%;
+	background-clip: border-box;
+	background-position: center;
+	border-radius: 50%;
+}
+
+.main-content {
+	padding-top: var(--main-content-padding-top-bottom);
+	padding-bottom: var(--main-content-padding-top-bottom);
+}
+.main-content__title {
+	text-transform: uppercase;
+	margin: 0 0 30px;
+}
+
+.partners-container {
+	display: flex;
+	margin: -1.32%;
+}
+
+.partner-card {
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin: 1.32%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.partner-card:hover {
+	box-shadow: 0 0 15px lightgray;
+	cursor: pointer;
+}
+.partner-card__logo {
+	background-clip: border-box;
+}
+.partner-card__logo.henkel {
+	background: url(./img/partners-logo/henkel-logo.svg) no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.john-deere {
+	background: url(https://s3-alpha-sig.figma.com/img/1daf/f9d1/2b25d0654635237fb2aba4589cdabda0?Expires=1636329600&Signature=ETCU7JBrOjyaSsyGPDeXGrN5OV~Wbg~z9-krFCcn~6oAObWTUVxUOLe2ySCGoAuvBLlIBBKe~ntxfZffj4Gl5jm9bAU5K4To3L9HQGOG0-VqYIu9bN~VFBs5BOYKUujKqK3EVcX-7bChOh~kkv9TZ5yP96tmVldL2RbF6~fAgzgL14RzcUGHQr15NrP3tf~35hE60~ptNV6kmwevOvOIGlIY6Sib0YE7Qt56MUj5FnjZH~KrmrD3f63Vv2yl3KAkCMVNwnOsqVRMXg3yE~aHr4M9faCPFl1l90jFoXz~AHng4WBBTVlnQieEU5IdC72FCtlBd712mKagV2ykafPCtw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.mc-donalds {
+	background: url(https://s3-alpha-sig.figma.com/img/c213/9c2c/de57d259400b7227ed2ebcdbc7f552ee?Expires=1636329600&Signature=SOniXv7O8R8qUrMBL59kmnJLuUUniZ5oEmA24l11BCXub2P7~sIGeeKkZm2zvkvwjTFLZWCkobTAwnVS0ImglZVsoobEDQ46wie7~35HeAJOnNDU4Cpzk3BOIyQNacbMuk4XiMuXU8X~BBmByWYW2CknmdOQDWmaTWlpaBei~dODybu8NBDrcrOW4Xa3qtexCmldP5MuyM5aiNjb4RZlBSpRSouIBjKSgqtlwpFWUQ163aCddto53RPz-l8Sb8tNx6S1HZTDoFD9NxZogvpV5-xuuhXQDVnrQ~JMwkvonFYz4j0BQB2yPggu3IVDxbxwhQHWL1jZV9CKsNtF3DWZwA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.ikea {
+	background: url(https://s3-alpha-sig.figma.com/img/73a4/62af/d230aa4ec339c681489bc377c6b74c99?Expires=1636329600&Signature=Lkp~SKj~WihMRcH~TvzqSAtlJunzCwP16YydbxI7fCmDZtRaW13TzR~ojlhfZthiSoMi1doPCXt-0Bm~xqX0e47Tn~zqXB~rKsdPVOApNJi0PfE0Z5RMGZ-DCspepnwklqlM2fdTUkKKSzvzx-WbaUY3r1BCV84Kk0ZkkPzLmDJ-ASCTPKSM-RTfQmzDLD1S1nideSnB7bt-bNe13TIdEe97SfAmigMC8vQB3OTSKxzEh7pKxyXNg8QxoJcqE8~ZARZsECXDBmzX9b7kkYRGf9L0m~iAuD0w6CBnh-t99c0VvKj6UVwZvNZ6GpCGUYPJ~lBa~67WH1tqYaGiXkh4Hw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.reebok {
+	background: url(https://s3-alpha-sig.figma.com/img/be67/6aac/829f281425e1f10bbafe83d78610cdab?Expires=1636329600&Signature=YRu5ysph0ZIKyqIEP5ilfPBgkyZvFCUkRfkC5AkmpGTSCZz9vn2-iKZrNlkEf7dpl~hAfXLNN5IxUn91oPVpqGXeho8QqRUm5b6yFK7gJMyxXSaCC6-i0~rbuB0IAD7GXrRP3lqVPOWmX~LgbJjl3B9jCSRtwtsGwPb6lMFlCeeS79auBwSdDxDfStA4548lvBLaruvsQFmTX4zOn6z~X9zp5Xn~CGua~uWEGjSnlewZs1z-gXKrH0vonbrNlsUxtzDNGtUE4VHyoFibyWs8Aq3GDcT1fUoYQrgtV~Lcg7USARFeCiDN1irdSyT40b4i9LQtckPLJab88D0VF~0BnQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.nike {
+	background: url(https://s3-alpha-sig.figma.com/img/39a3/f928/3a7c832346d5bdde51443bf6a1243325?Expires=1636329600&Signature=TWl-~YAlM-jFj7rf9ZrjRSCa8bBL4GCj7hY4gWdOQlRlEGGRP1M-OvTJu2rEI8KbVLaQQtuyZV8~VDmkTHvS0eS-kLAxufjDyHXmtl4EUkFEXqTg5sRtmRqmRuey6xqH~NntIeEX21VKvyWbnzW9kZModVBrLVY8YA9v5055YqfEKmq-icyKMx1BH8Fbo4qeNpANL7ZnDwaeib-i1fLGKIHsNLb5l82LC~SjWnBigY0OdLtUo344s55UZnWKSpnfohOd4ezhIv-oYQ-3jXereyED8jCntHpwb0eB~Ds-~123K1mrbp4J9uczuM5NlnheKMuiv4iqiGRDPbQrtWVhUA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+.partner-card__logo.caterpillar {
+	background: url(https://s3-alpha-sig.figma.com/img/23ca/e7ad/86ff04877c599a4a39cd9ade3498dc3e?Expires=1636329600&Signature=XqpVmwSqtjcJFG-cW3gMQEGt7jo03VheNRM29OyrJKTiRKmYPtAi7BPtNG3MEaD2FSN9wocjVxHqNZbk1BaWPP1zXVOh2np8I1ArchRPJJKtFqdYrdQur5nka8b3r2Y7P85vrQDSM2DZ6dWqB64D3626mg1ofsjSP-jTqCm7w5u8rLdPNYsPstbvuR4ucpnMdu3Ib8PDVeq7AuyRgwvwAGysJkomaQJLddAKgHzWrGtPttTCb6BHeIqPuwi0ni0PfmOOG3b8telpMrr1wSWKyUeKZCHJX0gU2vmfbWCdvjgmkLjyGyNgfWcciR-sUKdGYOb45Y2LPZdpOZ34Ak4fUQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
